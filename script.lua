@@ -49,6 +49,55 @@ local Window = Rayfield:CreateWindow({
     loadstring(game:HttpGet("https://raw.githubusercontent.com/LaeraLuzy/fly-not-by-me-/main/fly.lua",true))();
     end,
  })
+
+ -- Toggle
+ local Toggle = Tab:CreateToggle({
+   Name = "ESP",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+      local color = BrickColor.new(50,0,250)
+      local transparency = .8
+      
+      local Players = game:GetService("Players")
+      local function _ESP(c)
+        repeat wait() until c.PrimaryPart ~= nil
+        for i,p in pairs(c:GetChildren()) do
+          if p.ClassName == "Part" or p.ClassName == "MeshPart" then
+            if p:FindFirstChild("shit") then p.shit:Destroy() end
+            local a = Instance.new("BoxHandleAdornment",p)
+            a.Name = "shit"
+            a.Size = p.Size
+            a.Color = color
+            a.Transparency = transparency
+            a.AlwaysOnTop = true    
+            a.Visible = true    
+            a.Adornee = p
+            a.ZIndex = true    
+      
+          end
+        end
+      end
+      local function ESP()
+        for i,v in pairs(Players:GetChildren()) do
+          if v ~= game.Players.LocalPlayer then
+            if v.Character then
+              _ESP(v.Character)
+            end
+            v.CharacterAdded:Connect(function(chr)
+              _ESP(chr)
+            end)
+          end
+        end
+        Players.PlayerAdded:Connect(function(player)
+          player.CharacterAdded:Connect(function(chr)
+            _ESP(chr)
+          end)  
+        end)
+      end
+      ESP()
+   end,
+})
  
  -- Jailbreak
  -- Tab
@@ -119,4 +168,46 @@ local Button = Tab:CreateButton({
  })
 
 -- KAT
--- Ta
+-- Tab
+local Tab = Window:CreateTab("KAT", 4483362458) 
+
+-- Section
+local Section = Tab:CreateSection("KAT")
+
+-- Button
+local Button = Tab:CreateButton({
+    Name = "Owl Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
+    end,
+ })
+
+-- MURDERERS VS SHERRIFS
+-- Tab
+local Tab = Window:CreateTab("Murderers Vs Sherrifs", 4483362458) 
+
+-- Section
+local Section = Tab:CreateSection("Murderers Vs Sherrifs")
+
+-- Button
+local Button = Tab:CreateButton({
+    Name = "Owl Hub",
+    Callback = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Bebo-Mods/BeboScripts/main/MurderersVsSheriffs.lua"))()
+    end,
+ })
+
+ -- Arsenal
+ -- Tab
+ local Tab = Window:CreateTab("Murderer Vs Sherrifs", 4483362458) 
+ 
+ -- Section
+ local Section = Tab:CreateSection("Arsenal")
+
+ -- Button
+ local Button = Tab:CreateButton({
+    Name = "Owl Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
+    end,
+ })
