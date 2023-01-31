@@ -1,170 +1,122 @@
 -- Loadstring
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
--- Window
-local Window = Library.CreateLib("SyctheHub", "Sentinel")
+local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
 
--- Jailbreak
--- Tab
-local Jailbreak = Window:NewTab("Jailbreak")
+-- Window
+local Window = Rayfield:CreateWindow({
+    Name = "Sycthe",
+    LoadingTitle = "Loading...",
+    LoadingSubtitle = "by Sycthe",
+    ConfigurationSaving = {
+       Enabled = false,
+       FolderName = nil, -- Create a custom folder for your hub/game
+       FileName = "SyctheHub"
+    },
+    Discord = {
+       Enabled = true,
+       Invite = "6bzu3YJx", 
+       RememberJoins = false
+    },
+    KeySystem = true, 
+    KeySettings = {
+       Title = "Sycthe Hub",
+       Subtitle = "Enter Key",
+       Note = "Join the discord for key (https://discord.gg/6bzu3YJx)",
+       FileName = "SyctheKey",
+       SaveKey = false,
+       GrabKeyFromSite = false, 
+       Key = "vcx_ASDNSkasdMsd231+=/"
+    }
+ })
+ 
+ -- General
+ -- Tab
+ local Tab = Window:CreateTab("General", 4483362458)
+
+ -- Section
+ local Section = Tab:CreateSection("General Scripts")
+
+ -- Button
+ local Button = Tab:CreateButton({
+    Name = "Infinite Yield",
+    Callback = function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "Fly Script",
+    Callback = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/LaeraLuzy/fly-not-by-me-/main/fly.lua",true))();
+    end,
+ })
+ 
+ -- Jailbreak
+ -- Tab
+ local Tab = Window:CreateTab("Jailbreak", 4483362458) 
 
 -- Section
-local JailbreakSection = Jailbreak:NewSection("Jailbreak")
+local Section = Tab:CreateSection("Jailbreak")
 
 -- Button
-JailbreakSection:NewButton("Execute", "Executes The Jailbreak Script", function()
-   loadstring(game:HttpGet(('https://raw.githubusercontent.com/xChaoticVoid/Jailbreak/main/Chaos.lua'), true))()
-end)
+ local Button = Tab:CreateButton({
+   Name = "Execute",
+   Callback = function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/xChaoticVoid/Jailbreak/main/Chaos.lua'), true))()
+   end,
+})
 
 -- Phantom Forces
 -- Tab
-local Phantom = Window:NewTab("Phantom Forces")
+local Tab = Window:CreateTab("Phantom Forces", 4483362458) 
 
 -- Section
-local PhantomSection = Phantom:NewSection("Phantom")
+local Section = Tab:CreateSection("Phantom Forces")
 
 -- Button
-PhantomSection:NewButton("Silent Aim", "Executes The Silent Aim Script", function()
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/The3Bakers4565/Spicy-Bagel/main/Other/Phantom_Forces/Silent_Aim.lua"))()
-end)
+local Button = Tab:CreateButton({
+    Name = "Silent Aim",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/The3Bakers4565/Spicy-Bagel/main/Other/Phantom_Forces/Silent_Aim.lua"))()
+    end,
+ })
 
-PhantomSection:NewButton("ESP", "Executes The ESP Script", function()
-  loadstring(game:HttpGet(('https://raw.githubusercontent.com/rblxscriptsnet/scripts/main/phantomforces1'),true))()
-end)
+ -- Button
+local Button = Tab:CreateButton({
+    Name = "Multi Hack",
+    Callback = function()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/rblxscriptsnet/scripts/main/phantomforces1'),true))()
+    end,
+ })
 
--- Counter Blox
--- Tab
-local Cb = Window:NewTab("Counter Blox")
+ -- Bed Wars
+ -- Tab
+ local Tab = Window:CreateTab("Bed Wars", 4483362458) 
 
--- Section
-local CbSection = Cb:NewSection("Cb")
+ -- Section
+ local Section = Tab:CreateSection("Bed Wars")
 
--- Button
-CbSection:NewButton("Execute", "Executes The Counter Blox Script", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/Pawel12d/hexagon/main/scripts/CounterBlox.lua', true))()
-end)
+ -- Button
+local Button = Tab:CreateButton({
+    Name = "Execute",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
+    end,
+ })
 
--- Bedwars
--- Tab
-local Bw = Window:NewTab("Bed Wars")
+ -- Counter Blox 
+ -- Tab
+ local Tab = Window:CreateTab("Counter Blox", 4483362458) 
 
--- Section
-local BwSection = Bw:NewSection("Bw")
-
--- Button
-BwSection:NewButton("Execute", "Executes The Bedwars Script", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
-end)
-
--- Arsenal 
--- Tab
-local AR = Window:NewTab("Arsenal")
-
--- Section
-local ARSection = AR:NewSection("Arsenal")
+ -- Section
+local Section = Tab:CreateSection("Counter Blox")
 
 -- Button
-ARSection:NewButton("Owl Hub", "Executes The Owl Hub", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
-end)
-
--- Kat
--- Tab
-local Kat = Window:NewTab("Kat")
-
--- Section
-local KatSection = Kat:NewSection("Kat")
-
--- Button
-KatSection:NewButton("Owl Hub", "Executes The Owl Hub", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
-end)
-
--- Murderer VS Sherrif
--- Tab
-local KVS = Window:NewTab("Murderer VS Sherrif")
-
--- Section
-local KVSSection = KVS:NewSection("Murderer VS Sherrif")
-
--- Button
-KVSSection:NewButton("Excute", "Executes The Owl Hub", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Bebo-Mods/BeboScripts/main/MurderersVsSheriffs.lua"))()
-end)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
--- Keybind
--- Tab
-local Kb = Window:NewTab("Keybind")
-
--- Section
-local KbSection = Kb:NewSection("Kb")
-
--- Select Key
-KbSection:NewKeybind("Select A Key", "Select A Key", Enum.KeyCode.F, function()
-	Library:ToggleUI()
-end)
+local Button = Tab:CreateButton({
+    Name = "Hexagon",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/Pawel12d/hexagon/main/scripts/CounterBlox.lua', true))()
+    end,
+ })
+
+-- KAT
+-- Ta
