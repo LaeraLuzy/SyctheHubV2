@@ -100,9 +100,9 @@ local Window = Rayfield:CreateWindow({
 })
 
 local Toggle = Tab:CreateToggle({
-   Name = "Aimbot",
+   Name = "Toggle Example",
    CurrentValue = false,
-   Flag = "Toggle2", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(Value)
       local Camera = workspace.CurrentCamera
       local Players = game:GetService("Players")
@@ -209,14 +209,14 @@ local Toggle = Tab:CreateToggle({
  
  -- Jailbreak
  -- Tab
- local Tab = Window:CreateTab("Jailbreak", 4483362458) 
+ local Tab = Window:CreateTab("Jailbreak Scripts", 4483362458) 
 
 -- Section
 local Section = Tab:CreateSection("Jailbreak")
 
 -- Button
  local Button = Tab:CreateButton({
-   Name = "Execute",
+   Name = "Chaos",
    Callback = function()
     loadstring(game:HttpGet(('https://raw.githubusercontent.com/xChaoticVoid/Jailbreak/main/Chaos.lua'), true))()
    end,
@@ -227,7 +227,7 @@ local Section = Tab:CreateSection("Jailbreak")
 local Tab = Window:CreateTab("Phantom Forces", 4483362458) 
 
 -- Section
-local Section = Tab:CreateSection("Phantom Forces")
+local Section = Tab:CreateSection("Phantom Forces Scripts")
 
 -- Button
 local Button = Tab:CreateButton({
@@ -250,11 +250,11 @@ local Button = Tab:CreateButton({
  local Tab = Window:CreateTab("Bed Wars", 4483362458) 
 
  -- Section
- local Section = Tab:CreateSection("Bed Wars")
+ local Section = Tab:CreateSection("Bed Wars Scripts")
 
  -- Button
 local Button = Tab:CreateButton({
-    Name = "Execute",
+    Name = "Vape V4",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
     end,
@@ -265,7 +265,7 @@ local Button = Tab:CreateButton({
  local Tab = Window:CreateTab("Counter Blox", 4483362458) 
 
  -- Section
-local Section = Tab:CreateSection("Counter Blox")
+local Section = Tab:CreateSection("Counter Blox Scripts")
 
 -- Button
 local Button = Tab:CreateButton({
@@ -277,7 +277,7 @@ local Button = Tab:CreateButton({
 
 -- KAT
 -- Tab
-local Tab = Window:CreateTab("KAT", 4483362458) 
+local Tab = Window:CreateTab("KAT Scripts", 4483362458) 
 
 -- Section
 local Section = Tab:CreateSection("KAT")
@@ -292,14 +292,14 @@ local Button = Tab:CreateButton({
 
 -- MURDERERS VS SHERRIFS
 -- Tab
-local Tab = Window:CreateTab("Murderers Vs Sherrifs", 4483362458) 
+local Tab = Window:CreateTab("Murderers Vs Sherrifs Scripts", 4483362458) 
 
 -- Section
 local Section = Tab:CreateSection("Murderers Vs Sherrifs")
 
 -- Button
 local Button = Tab:CreateButton({
-    Name = "Owl Hub",
+    Name = "Bebo",
     Callback = function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Bebo-Mods/BeboScripts/main/MurderersVsSheriffs.lua"))()
     end,
@@ -307,10 +307,10 @@ local Button = Tab:CreateButton({
 
  -- Arsenal
  -- Tab
- local Tab = Window:CreateTab("Murderer Vs Sherrifs", 4483362458) 
+ local Tab = Window:CreateTab("Arsenal", 4483362458) 
  
  -- Section
- local Section = Tab:CreateSection("Arsenal")
+ local Section = Tab:CreateSection("Arsenal Scripts")
 
  -- Button
  local Button = Tab:CreateButton({
@@ -319,3 +319,112 @@ local Button = Tab:CreateButton({
         loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
     end,
  })
+
+ local Button = Tab:CreateButton({
+   Name = "StormWare Lite",
+   Callback = function()
+      _G.lockMeth = "Random" 
+_G.silMeth = "FPORWIL" 
+_G.AntiFly = false 
+_G.Keystrokes = true 
+_G.HideOverlay = false
+
+
+local g = game:HttpGet("https://raw.githubusercontent.com/Storm99999/whitelistkeys/main/lite/sw.lite.lua")
+loadstring(g:reverse())()
+task.wait(2)
+if _G.HideOverlay == true then
+    game.CoreGui["StormWare LITE"].modules.Visible = false
+end
+
+
+game.CoreGui["StormWare LITE"].keystrokes.space.Text = "━━━━━"
+   end,
+})
+
+
+ -- Blox Fruits
+ -- Tab
+ local Tab = Window:CreateTab("Blox Fruits", 4483362458) 
+
+ -- Section
+ local Section = Tab:CreateSection("Blox Fruits Scripts")
+
+ -- Button
+ local Button = Tab:CreateButton({
+   Name = "OP GUI",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Steveee11/Scripts/main/Blox%20Fruits%20OP%20Script"))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Chest Farm",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Steveee11/Scripts/main/Blox%20Fruits%20OP%20Script"))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "OP GUI",
+   Callback = function()
+      loadstring(game:HttpGet('https://raw.githubusercontent.com/TUPERX/TUPERX/Main/MenuBF/README.md'))()
+   end,
+})
+
+-- Da Hood
+-- Tab
+local Tab = Window:CreateTab("Da Hood", 4483362458)
+
+-- Section
+local Section = Tab:CreateSection("Da Hood Scripts")
+
+-- Button
+local Button = Tab:CreateButton({
+   Name = "OP GUI",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Allvideo/test/main/Whitelist.txt"))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "OP GUI",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/FarmyScript/Dahood-GUI-/main/README.md"))()
+   end,
+})
+
+-- Ninja Legends
+-- Tab
+local Tab = Window:CreateTab("Ninja Legends", 4483362458)
+
+-- Section
+local Section = Tab:CreateSection("Ninja Legends Scripts")
+
+-- Button
+local Button = Tab:CreateButton({
+   Name = "AutoFarm",
+   Callback = function()
+      loadstring(game:HttpGet(('https://raw.githubusercontent.com/romkich09/MainForRealium/main/ForRealium'),true))()
+   end,
+})
+
+
+
+
+
+
+
+
+
+
+
+-- Made by Laera#4687
+
+-- Its not a hub its a loader.
+
+-- I think i will not release the new versions bc why not
+
+-- You can message me on discord if u want new versions. (Laera#4687)
+
+-- Btw we have a exploit too on discord server. (WRD Api)
