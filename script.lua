@@ -8,7 +8,7 @@ local Window = Rayfield:CreateWindow({
     LoadingSubtitle = "by Sycthe",
     ConfigurationSaving = {
        Enabled = false,
-       FolderName = nil, -- Create a custom folder for your hub/game
+       FolderName = nil, 
        FileName = "SyctheHub"
     },
     Discord = {
@@ -16,7 +16,7 @@ local Window = Rayfield:CreateWindow({
        Invite = "6bzu3YJx", 
        RememberJoins = false
     },
-    KeySystem = true, 
+    KeySystem = false, 
     KeySettings = {
        Title = "Sycthe Hub",
        Subtitle = "Enter Key",
