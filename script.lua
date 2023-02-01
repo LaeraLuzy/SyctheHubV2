@@ -24,7 +24,7 @@ local Window = Rayfield:CreateWindow({
        FileName = "SyctheKey",
        SaveKey = false,
        GrabKeyFromSite = false, 
-       Key = "vcx_ASDNSkasdMsd231+=/"
+       Key = "dev"
     }
  })
  
