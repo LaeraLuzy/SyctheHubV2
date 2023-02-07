@@ -16,7 +16,7 @@ local Window = Rayfield:CreateWindow({
        Invite = "6bzu3YJx", 
        RememberJoins = false
     },
-    KeySystem = true, 
+    KeySystem = false, 
     KeySettings = {
        Title           = "Sycthe Hub",
        Subtitle        = "Enter Key",
